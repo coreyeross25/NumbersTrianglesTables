@@ -1,5 +1,5 @@
 package io.zipcoder.microlabs.mastering_loops;
-
+import org.junit.Test;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -8,7 +8,7 @@ public class NumberUtilitiesTest {
     public void testGetRange1A() {
         // : Given
         String expected = "0123456789";
-        int stop = 11;
+        int stop = 20;
 
         // : When
         String actual = NumberUtilities.getRange(stop);
@@ -34,7 +34,7 @@ public class NumberUtilitiesTest {
     public void testGetRange3A() {
         // : Given
         String expected = "012345678910111213141516171819";
-        int stop = 20;
+        int stop = 10;
 
         // : When
         String actual = NumberUtilities.getRange(stop);
