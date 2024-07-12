@@ -1,6 +1,8 @@
 package io.zipcoder.microlabs.mastering_loops;
 
 
+import static jdk.internal.org.jline.utils.Colors.s;
+
 public class NumberUtilities {
 
     public static String getEvenNumbers(int start, int stop) {
@@ -24,33 +26,51 @@ public class NumberUtilities {
 
 
     public static String getSquareNumbers(int start, int stop, int step) {
+            StringBuilder squareNumber = new StringBuilder();
 
-        getExponentiations(start, stop, step, 2);
+            for (int i = start; i < stop; i+=step) {
+                squareNumber.append(Math.round(Math.pow(i, 2)));
+            }
+
+        return squareNumber.toString();
     }
-    // should be stop
-    // changed from start to stop
-    public static String getRange(int stop) {
 
-        //return getExponentiations(0, stop, 1, 1 );;
-        String s = "";
+    public static String getRange(int stop) {
+        StringBuilder getRan = new StringBuilder();
+
         for (int i = 0; i < stop; i = i + 1){
-            s = s + integer.toSring(i);
+            getRan.append(i);
         }
-        return s;
+        return getRan.toString();
     }
 
     public static String getRange(int start, int stop) {
+            StringBuilder getRange = new StringBuilder();
+            for (int i = start; i < stop; i = i + 1){
+                getRange.append(i);
+            }
 
-        return getExponentiations(start, stop, 1, 1 );;
+        return getRange.toString();
     }
 
 
     public static String getRange(int start, int stop, int step) {
-        return getExponentiations(start, stop, step, 1 );
+            StringBuilder gr = new StringBuilder();
+
+            for (int i = start; i < stop; i+=step) {
+                gr.append(i);
+            }
+            return gr.toString();
     }
 
 
     public static String getExponentiations(int start, int stop, int step, int exponent) {
-        return null;
+        StringBuilder expo = new StringBuilder();
+
+        for ( int i = start; i < stop; i+=step) {
+            expo.append(Math.round(Math.pow(i, exponent)));
+        }
+
+        return expo.toString();
     }
 }
